@@ -35,6 +35,12 @@ yarn build
 # Do some minor change (e.g in README.md) and push to the repo. again to trigger the GitHub deployment process.
 
 # DONE
-
-
 ```
+
+# Tips for VSCode
+
+_*Useful extensions for tailwindCSS*_
+
+[Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
+
+[Tailwind Docs](https://marketplace.visualstudio.com/items?itemName=austenc.tailwind-docs)
