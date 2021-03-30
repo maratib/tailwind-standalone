@@ -8,7 +8,7 @@ module.exports = {
     process.env.NODE_ENV === 'production' ? require('autoprefixer') : null,
     process.env.NODE_ENV === 'production' ? cssnano({ preset: 'default' }) : null,
     purgecss({
-      content: ['./layouts/**/*.html', './src/**/*.vue', './src/**/*.jsx'],
+      content: ['./src/**/*.html', './src/**/*.vue', './src/**/*.jsx'],
       defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
     })
   ]
