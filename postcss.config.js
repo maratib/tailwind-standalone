@@ -1,19 +1,15 @@
-// @ts-nocheck
-// postcss.config.js
-const tailwindcss = require('tailwindcss');
-const autoprefixer = require('autoprefixer');
-const cssnano = require('cssnano')({
-	preset: 'default'
-});
-const purgecss = require('@fullhuman/postcss-purgecss')({
-	content: ['./src/**/*.html', './src/**/*.js'],
-	defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
-});
+const purgecss = require('@fullhuman/postcss-purgecss')
+const cssnano = require('cssnano')
 
 module.exports = {
-	plugins: [
-		tailwindcss,
-		autoprefixer,
-		...(process.env.NODE_ENV === "production" ? [purgecss, cssnano] : [])
-	]
-};
+  plugins: [
+    require('tailwindcss'),
+    // require('@tailwindcss/jit'),
+    process.env.NODE_ENV === 'production' ? require('autoprefixer') : null,
+    process.env.NODE_ENV === 'production' ? cssnano({ preset: 'default' }) : null,
+    purgecss({
+      content: ['./layouts/**/*.html', './src/**/*.vue', './src/**/*.jsx'],
+      defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
+    })
+  ]
+}

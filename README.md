@@ -15,6 +15,14 @@ yarn build
 
 ```
 
+## Enabling JIT
+
+```bash
+# In postcss.config.js
+#  //require('tailwindcss'), uncomment it for normal tailwindcss
+#  //require('@tailwindcss/jit'), uncomment it for jit
+```
+
 ## Github pages
 
 ```bash
