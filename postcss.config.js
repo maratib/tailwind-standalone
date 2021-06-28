@@ -4,7 +4,6 @@ const cssnano = require('cssnano')
 module.exports = {
   plugins: [
     require('tailwindcss'),
-    // require('@tailwindcss/jit'),
     process.env.NODE_ENV === 'production' ? require('autoprefixer') : null,
     process.env.NODE_ENV === 'production' ? cssnano({ preset: 'default' }) : null,
     purgecss({
