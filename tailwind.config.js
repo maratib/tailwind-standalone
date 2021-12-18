@@ -1,14 +1,11 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
 // tailwind.config.js
 module.exports = {
-  mode: 'jit',
-  purge: [
-    './src/**/*.html',
-    './src/**/*.js',
-  ],
-  darkMode: false, // or 'media' or 'class'
+  mode: "jit",
+  content: ["./src/**/*.html", "./src/**/*.js"],
   theme: {
-    extend: { fontFamily: {
+    extend: {
+      fontFamily: {
         sans: ["Nunito", ...defaultTheme.fontFamily.sans],
       },
 
@@ -19,12 +16,11 @@ module.exports = {
         "light-yellow": "#FEF3C7",
         "requester-bg": "#FEF3C7",
         "yellow-nav": "#E7BA19",
-        "midnightblue": "#192745",
+        "midnight-blue": "#192745",
         "medium-gray": "#4B5563",
         "normal-gray": "#9CA3AF",
         "request-text": "#787878",
-        "darkslategray": "#202a3e",
-        "skyblue": "#5FC4EE",
+        "sky-blue": "#5FC4EE",
         current: "#ffffff",
       },
       width: {
@@ -44,8 +40,8 @@ module.exports = {
         "100px": "100px",
       },
       borderRadius: {
-        'large': '10px',
-      }
+        large: "10px",
+      },
     },
   },
 

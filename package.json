@@ -11,23 +11,23 @@
   "scripts": {
     "build": "cross-env NODE_ENV=production postcss tailwind.css -o docs/styles.css",
     "postbuild": "cp -av src/* docs && mv docs/styles.css docs/assets/css",
-    "build:dev": "tailwindcss build tailwind.css -o src/assets/css/styles.css",
+    "build:dev": "tailwindcss -i tailwind.css -o src/assets/css/styles.css",
     "live": "live-server ./src --port=8080 --ignore=/assets/css",
-    "dev": "yarn build:dev watch ./src/ --ignoreDirectoryPattern='/assets/css/' & yarn live"
+    "dev": "yarn build:dev &  watch ./src/ --ignoreDirectoryPattern='/assets/css/' & yarn live"
   },
   "devDependencies": {
-    "@fullhuman/postcss-purgecss": "^4.0.0",
-    "@tailwindcss/aspect-ratio": "^0.2.1",
-    "@tailwindcss/forms": "^0.3.3",
-    "@tailwindcss/jit": "^0.1.17",
-    "@tailwindcss/typography": "^0.4.1",
-    "autoprefixer": "^10.2.5",
+    "@fullhuman/postcss-purgecss": "^4.1.3",
+    "@tailwindcss/aspect-ratio": "^0.4.0",
+    "@tailwindcss/forms": "^0.4.0",
+    "@tailwindcss/jit": "^0.1.18",
+    "@tailwindcss/typography": "^0.5.0",
+    "autoprefixer": "^10.4.0",
     "cross-env": "^7.0.3",
-    "cssnano": "^4.1.10",
+    "cssnano": "^5.0.13",
     "live-server": "^1.2.1",
-    "postcss": "^8.2.4",
-    "postcss-cli": "^8.3.1",
-    "tailwindcss": "^2.2.4",
+    "postcss": "^8.4.5",
+    "postcss-cli": "^9.1.0",
+    "tailwindcss": "^3.0.7",
     "watch": "^1.0.2"
   }
 }
