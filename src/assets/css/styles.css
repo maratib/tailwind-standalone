@@ -589,6 +589,15 @@ select {
   outline: 1px auto -webkit-focus-ring-color;
 }
 
+/* h1 {
+    @apply text-6xl;
+  }
+  h2 {
+    @apply text-xl;
+  } */
+
+/* ... */
+
 .container {
   width: 100%;
 }
@@ -669,3 +678,10 @@ select {
   --tw-text-opacity: 1;
   color: rgb(29 78 216 / var(--tw-text-opacity));
 }
+
+h1 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+/* User @layer instead of variants in configuration file */

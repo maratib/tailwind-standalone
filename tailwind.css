@@ -4,3 +4,23 @@
 /* purgecss end ignore */
 @tailwind utilities;
 /*# sourceMappingURL=tailwind.css.map */
+
+/* User @layer instead of variants in configuration file */
+@layer base {
+  /* h1 {
+    @apply text-6xl;
+  }
+  h2 {
+    @apply text-xl;
+  } */
+  /* ... */
+}
+
+@layer components {
+}
+
+@layer utilities {
+  h1 {
+    @apply text-xl;
+  }
+}
