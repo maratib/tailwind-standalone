@@ -1,4 +1,4 @@
-# TailwindCSS 2.2, postCSS with live-reload as standalone, github pages ready
+# TailwindCSS 3, postCSS with live-reload as standalone, github pages ready
 
 ## Setup
 
